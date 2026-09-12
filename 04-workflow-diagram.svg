@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 42px 'DejaVu Sans', Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 21px 'DejaVu Sans', Arial, sans-serif; fill: #475569; }
+      .step { font: 700 17px 'DejaVu Sans', Arial, sans-serif; letter-spacing: 1px; }
+      .box-title { font: 700 22px 'DejaVu Sans', Arial, sans-serif; fill: #0f172a; }
+      .body { font: 400 17px 'DejaVu Sans', Arial, sans-serif; fill: #334155; }
+      .small { font: 400 15px 'DejaVu Sans', Arial, sans-serif; fill: #64748b; }
+      .handoff { font: 700 14px 'DejaVu Sans', Arial, sans-serif; fill: #7c3aed; }
+      .panel-title { font: 700 22px 'DejaVu Sans', Arial, sans-serif; fill: #991b1b; }
+      .panel-body { font: 400 18px 'DejaVu Sans', Arial, sans-serif; fill: #7f1d1d; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1600" height="12" fill="#2563eb"/>
+
+  <text x="70" y="80" class="title">Current-State Workflow — Đặt lịch khám ban đầu tại Vinmec</text>
+  <text x="70" y="120" class="subtitle">Quy trình hiện tại trước khi tích hợp AI • Thời gian cần đo baseline bằng dữ liệu vận hành thực tế</text>
+
+  <g transform="translate(70,158)">
+    <circle cx="10" cy="10" r="9" fill="#dc2626"/>
+    <text x="28" y="16" class="small">Bottleneck</text>
+    <path d="M 155 10 L 195 10" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="212" y="16" class="small">Luồng xử lý</text>
+    <rect x="350" y="0" width="26" height="20" rx="5" fill="#ede9fe" stroke="#8b5cf6"/>
+    <text x="388" y="16" class="small">Handoff giữa các bên</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 318 425 L 365 425" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M 608 425 L 655 425" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M 898 425 L 945 425" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M 1188 425 L 1235 425" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Handoff labels -->
+  <rect x="292" y="326" width="100" height="30" rx="15" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text x="342" y="347" text-anchor="middle" class="handoff">HANDOFF</text>
+  <text x="342" y="374" text-anchor="middle" class="small">Bệnh nhân → Tổng đài</text>
+
+  <rect x="872" y="326" width="100" height="30" rx="15" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text x="922" y="347" text-anchor="middle" class="handoff">HANDOFF</text>
+  <text x="922" y="374" text-anchor="middle" class="small">Tổng đài → Đặt lịch</text>
+
+  <!-- Step 1 -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="385" width="248" height="270" rx="18" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="70" y="385" width="248" height="48" rx="18" fill="#dbeafe"/>
+    <rect x="70" y="415" width="248" height="18" fill="#dbeafe"/>
+  </g>
+  <text x="94" y="417" class="step" fill="#1d4ed8">BƯỚC 1</text>
+  <text x="94" y="476" class="box-title">
+    <tspan x="94" dy="0">Bệnh nhân gửi</tspan>
+    <tspan x="94" dy="30">yêu cầu</tspan>
+  </text>
+  <text x="94" y="558" class="body">
+    <tspan x="94" dy="0">Mô tả triệu chứng</tspan>
+    <tspan x="94" dy="27">bằng text/cuộc gọi</tspan>
+  </text>
+  <text x="94" y="628" class="small">Đầu ra: mô tả tự do</text>
+
+  <!-- Step 2 -->
+  <g filter="url(#shadow)">
+    <rect x="360" y="385" width="248" height="270" rx="18" fill="#ffffff" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="360" y="385" width="248" height="48" rx="18" fill="#fef3c7"/>
+    <rect x="360" y="415" width="248" height="18" fill="#fef3c7"/>
+  </g>
+  <text x="384" y="417" class="step" fill="#b45309">BƯỚC 2</text>
+  <text x="384" y="476" class="box-title">
+    <tspan x="384" dy="0">Đọc và hỏi thêm</tspan>
+    <tspan x="384" dy="30">thông tin</tspan>
+  </text>
+  <text x="384" y="558" class="body">
+    <tspan x="384" dy="0">Nhân viên làm rõ</tspan>
+    <tspan x="384" dy="27">nội dung còn thiếu</tspan>
+  </text>
+  <text x="384" y="628" class="small">Thời gian: cần đo baseline</text>
+
+  <!-- Step 3 bottleneck -->
+  <g filter="url(#shadow)">
+    <rect x="650" y="385" width="248" height="270" rx="18" fill="#fff7f7" stroke="#dc2626" stroke-width="4"/>
+    <rect x="650" y="385" width="248" height="48" rx="18" fill="#fee2e2"/>
+    <rect x="650" y="415" width="248" height="18" fill="#fee2e2"/>
+  </g>
+  <circle cx="870" cy="409" r="10" fill="#dc2626"/>
+  <text x="674" y="417" class="step" fill="#b91c1c">BƯỚC 3</text>
+  <text x="674" y="476" class="box-title">
+    <tspan x="674" dy="0">Diễn giải và tra</tspan>
+    <tspan x="674" dy="30">cứu chuyên khoa</tspan>
+  </text>
+  <text x="674" y="558" class="body">
+    <tspan x="674" dy="0">Phụ thuộc kinh nghiệm</tspan>
+    <tspan x="674" dy="27">của từng nhân viên</tspan>
+  </text>
+  <text x="674" y="628" class="small" fill="#b91c1c">BOTTLENECK GIẢ ĐỊNH</text>
+
+  <!-- Step 4 -->
+  <g filter="url(#shadow)">
+    <rect x="940" y="385" width="248" height="270" rx="18" fill="#ffffff" stroke="#86efac" stroke-width="2"/>
+    <rect x="940" y="385" width="248" height="48" rx="18" fill="#dcfce7"/>
+    <rect x="940" y="415" width="248" height="18" fill="#dcfce7"/>
+  </g>
+  <text x="964" y="417" class="step" fill="#15803d">BƯỚC 4</text>
+  <text x="964" y="476" class="box-title">
+    <tspan x="964" dy="0">Đề xuất khoa và</tspan>
+    <tspan x="964" dy="30">khung giờ</tspan>
+  </text>
+  <text x="964" y="558" class="body">
+    <tspan x="964" dy="0">Nhân viên trao đổi</tspan>
+    <tspan x="964" dy="27">lựa chọn với BN</tspan>
+  </text>
+  <text x="964" y="628" class="small">Đầu ra: lựa chọn dự kiến</text>
+
+  <!-- Step 5 -->
+  <g filter="url(#shadow)">
+    <rect x="1230" y="385" width="300" height="270" rx="18" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="1230" y="385" width="300" height="48" rx="18" fill="#dbeafe"/>
+    <rect x="1230" y="415" width="300" height="18" fill="#dbeafe"/>
+  </g>
+  <text x="1254" y="417" class="step" fill="#1d4ed8">BƯỚC 5</text>
+  <text x="1254" y="476" class="box-title">
+    <tspan x="1254" dy="0">Xác nhận và</tspan>
+    <tspan x="1254" dy="30">tạo lịch</tspan>
+  </text>
+  <text x="1254" y="558" class="body">
+    <tspan x="1254" dy="0">Bệnh nhân xác nhận;</tspan>
+    <tspan x="1254" dy="27">nhân viên tạo lịch</tspan>
+  </text>
+  <text x="1254" y="628" class="small">Chủ thể: con người</text>
+
+  <!-- Bottom insight panel -->
+  <rect x="70" y="724" width="1460" height="192" rx="22" fill="#fff1f2" stroke="#fecaca" stroke-width="2"/>
+  <circle cx="112" cy="770" r="13" fill="#dc2626"/>
+  <text x="142" y="779" class="panel-title">Điểm nghẽn cần kiểm chứng: Bước 2–3</text>
+  <text x="110" y="823" class="panel-body">
+    <tspan x="110" dy="0">Nhân viên phải hiểu mô tả tự do, hỏi lại thông tin thiếu và tra cứu phạm vi chuyên khoa.</tspan>
+    <tspan x="110" dy="34">Giả định Quick Card: tổng thời gian 5–10 phút/yêu cầu. Cần đo baseline, số lượt hỏi lại và tỷ lệ chuyển sai trước khi triển khai AI.</tspan>
+  </text>
+
+  <text x="70" y="966" class="small">Ký hiệu: chấm đỏ = bottleneck • nhãn tím = handoff • Sơ đồ phục vụ Lab 02 AI Product Scoping</text>
+</svg>
